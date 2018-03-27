@@ -1,0 +1,10 @@
+HIDDEN_UNITS=50,50,50,50
+ROOT_DIR=F:\\Coding\\Python\\AIAM
+TRAIN_DATA_FILE=data\\train.csv
+TEST_DATA_FILE=data\\test.csv
+RESULT_FILE=results\\results.txt
+MODEL_DIR=model\\
+MODEL_TYPE=deep_wide_combo
+NUM_EPOCHS=1
+EPOCHS_PER_EVAL=1
+BATCH_SIZE=20000
