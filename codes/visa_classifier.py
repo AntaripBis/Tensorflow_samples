@@ -20,11 +20,18 @@ _CSV_COLUMN_DEFAULTS = [['N/A'],['N/A'],['N/A'],
 
 LABEL_VOCABULARY = ["WITHDRAWN","CERTIFIEDWITHDRAWN","DENIED","CERTIFIED"]
 HIDDEN_UNITS = [50, 50, 50, 50]
-TRAIN_DATA_FILE = ""
-TEST_DATA_FILE = ""
-RESULT_FILE = ""
+ROOT_DIR = "F:\\Coding\\Python\\AIAM"
+TRAIN_DATA_FILE = "F:\\Coding\\Python\\AIAM\\data\\train.csv"
+TEST_DATA_FILE = "F:\\Coding\\Python\\AIAM\\data\\test.csv"
+RESULT_FILE = "F:\\Coding\\Python\\AIAM\\results\\results.txt"
+MODEL_DIR = "F:\\Coding\\Python\\AIAM\\model\\"
+NUM_EPOCHS = 2
+EPOCHS_PER_EVAL = 1
+BATCH_SIZE = 20000
+MODEL_TYPE="deep_wide_combo"
 
 
+CONFIG_FILE = "F:\\Coding\\Python\\AIAM\\config\\config.txt"
 
 
 
@@ -138,33 +145,78 @@ def build_estimator(model_dir, model_type):
             config=run_config,label_vocabulary=LABEL_VOCABULARY,n_classes=4)
 
 
+def read_config(config_file="config/config.txt"):
+    reader = open(config_file,'r')
+    property_list = reader.readlines()
+    for line in property_list:
+        line = line.rstrip("\n")
+        key_value_pair = line.split("=")
+        if len(key_value_pair) == 2:
+            #print("Entered the run config function")
+            if key_value_pair[0] == "HIDDEN_UNITS":
+                temp_list = key_value_pair[1].split(",")
+                global HIDDEN_UNITS
+                HIDDEN_UNITS = []
+                for unit in temp_list:
+                    HIDDEN_UNITS.append(int(unit))
+            elif key_value_pair[0] == "ROOT_DIR":
+                global ROOT_DIR
+                ROOT_DIR = key_value_pair[1]
+            elif key_value_pair[0] == "TRAIN_DATA_FILE":
+                global TRAIN_DATA_FILE
+                TRAIN_DATA_FILE = ROOT_DIR+"//"+key_value_pair[1]
+            elif key_value_pair[0] == "TEST_DATA_FILE":
+                global TEST_DATA_FILE
+                TEST_DATA_FILE = ROOT_DIR+"//"+key_value_pair[1]
+            elif key_value_pair[0] == "RESULT_FILE":
+                global RESULT_FILE
+                RESULT_FILE = ROOT_DIR+"//"+key_value_pair[1]
+            elif key_value_pair[0] == "MODEL_DIR":
+                global MODEL_DIR
+                MODEL_DIR = ROOT_DIR+"//"+key_value_pair[1]
+            elif key_value_pair[0] == "MODEL_TYPE":
+                global MODEL_TYPE
+                MODEL_TYPE = key_value_pair[1]
+            elif key_value_pair[0] == "NUM_EPOCHS":
+                global NUM_EPOCHS
+                NUM_EPOCHS = int(key_value_pair[1])
+                print("I have entered num epochs")
+            elif key_value_pair[0] == "EPOCHS_PER_EVAL":
+                global EPOCHS_PER_EVAL
+                EPOCHS_PER_EVAL = int(key_value_pair[1])
+            elif key_value_pair[0] == "BATCH_SIZE":
+                global BATCH_SIZE
+                BATCH_SIZE = int(key_value_pair[1])
+    reader.close()
+
 def run_classifier(unused):
     # Clean up the model directory if present
-    train_data_file = "F:\\Coding\\Python\\AIAM\\data\\train.csv"
-    test_data_file = "F:\\Coding\\Python\\AIAM\\data\\test.csv"
-    result_data_file = "F:\\Coding\\Python\\AIAM\\results\\results.txt"
-    num_epochs = 3
-    epochs_per_eval = 1
-    batch_size = 20000
-    model_dir="F:\\Coding\\Python\\AIAM\\model\\"
-    model_type="deep_wide_combo"
-    shutil.rmtree(model_dir+model_type, ignore_errors=True)
-    model = build_estimator(model_dir+model_type, model_type)
+    #train_data_file =
+    #test_data_file = "F:\\Coding\\Python\\AIAM\\data\\test.csv"
 
-    writer = open(result_data_file,'a')
+    #num_epochs = 3
+    #epochs_per_eval = 1
+    #batch_size = 20000
+    #model_dir="F:\\Coding\\Python\\AIAM\\model\\"
+    #model_type="deep_wide_combo"
+    read_config(CONFIG_FILE)
+    shutil.rmtree(MODEL_DIR+MODEL_TYPE, ignore_errors=True)
+    model = build_estimator(MODEL_DIR+MODEL_TYPE, MODEL_TYPE)
+
+    writer = open(RESULT_FILE,'a')
     writer.write("=================Iteration starts =============== \n")
     # Train and evaluate the model every `FLAGS.epochs_per_eval` epochs.
     writer.write("Hidden Layer Structure : "+str(HIDDEN_UNITS)+"\n")
-    for n in range(int(num_epochs/epochs_per_eval)):
+    for n in range(int(NUM_EPOCHS/EPOCHS_PER_EVAL)):
         #print("Searching training file at "+os.getcwd()+"\\"+train_data_file)
-        model.train(input_fn=lambda: read_input_data(train_data_file, epochs_per_eval, True, batch_size))
+        model.train(input_fn=lambda: read_input_data(TRAIN_DATA_FILE, EPOCHS_PER_EVAL, True, BATCH_SIZE))
         #print("Searching test file at "+os.getcwd()+"\\"+test_data_file)
         writer.write("*"*100)
         writer.write("\n")
-        writer.write("Evaluation on the training set for bias")
-        results = model.evaluate(input_fn=lambda: read_input_data(train_data_file, 1, False, batch_size))
+        writer.write("Evaluation on the training set for bias \n")
+        results = model.evaluate(input_fn=lambda: read_input_data(TRAIN_DATA_FILE, 1, False, BATCH_SIZE))
         # Display evaluation metrics on training data
-        writer.write('Results at epoch (Training data)'+str((n + 1) * epochs_per_eval)+"\n")
+        writer.write('Results at epoch (Training data)'+str((n + 1) * EPOCHS_PER_EVAL)+"\n")
         writer.write('-' * 60)
         writer.write("\n")
         for key in sorted(results):
@@ -172,9 +224,9 @@ def run_classifier(unused):
         writer.write("*"*100)
         writer.write("\n")
         writer.write("Evaluation on the test set for variance \n")
-        results = model.evaluate(input_fn=lambda: read_input_data(test_data_file, 1, False, batch_size))
+        results = model.evaluate(input_fn=lambda: read_input_data(TEST_DATA_FILE, 1, False, BATCH_SIZE))
         # Display evaluation metrics on test data
-        writer.write('Results at epoch (Test data)'+str((n + 1) * epochs_per_eval)+"\n")
+        writer.write('Results at epoch (Test data)'+str((n + 1) * EPOCHS_PER_EVAL)+"\n")
         writer.write('-' * 60)
         writer.write("\n")
         for key in sorted(results):
