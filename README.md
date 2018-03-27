@@ -29,7 +29,7 @@ Sample result is as mentioned below. For each evaluation, the trained model is e
 
 =================Iteration starts =============== 
 Hidden Layer Structure : [50, 50, 50, 50]
-****************************************************************************************************
+
 Evaluation on the training set for bias 
 Results at epoch (Training data)1
 ------------------------------------------------------------
@@ -37,7 +37,7 @@ accuracy : 0.51782566
 average_loss : 348.2177
 global_step : 5
 loss : 6868385.5
-****************************************************************************************************
+
 Evaluation on the test set for variance 
 Results at epoch (Test data)1
 ------------------------------------------------------------
