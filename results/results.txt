@@ -1,0 +1,319 @@
+=================Iteration starts ===============****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.40321633
+average_loss : 200.4121
+global_step : 5
+loss : 3953008.5
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.2987763
+average_loss : 326.20773
+global_step : 5
+loss : 4576150.5
+===================Iteration ends ================================Iteration starts ===============****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 304.37744
+global_step : 5
+loss : 6003662.5
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 405.73547
+global_step : 5
+loss : 5691792.5
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)2
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 113.19833
+global_step : 10
+loss : 2232769.2
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)2
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 164.21011
+global_step : 10
+loss : 2303594.2
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)3
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 253.66116
+global_step : 15
+loss : 5003314.5
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)3
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 375.8012
+global_step : 15
+loss : 5271865.0
+===================Iteration ends ================================Iteration starts ===============
+Hidden Layer Structure : [50, 30, 20, 10]
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 526.8131
+global_step : 5
+loss : 10391073.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 754.9082
+global_step : 5
+loss : 10590104.0
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)2
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 327.4102
+global_step : 10
+loss : 6457969.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)2
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 516.8427
+global_step : 10
+loss : 7250442.0
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)3
+------------------------------------------------------------
+accuracy : 0.29080734
+average_loss : 173.14595
+global_step : 15
+loss : 3415200.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)3
+------------------------------------------------------------
+accuracy : 0.2798384
+average_loss : 283.066
+global_step : 15
+loss : 3970944.2
+===================Iteration ends ===============
+=================Iteration starts =============== 
+Hidden Layer Structure : [50, 50, 50, 50]
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 446.23926
+global_step : 5
+loss : 8801802.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 643.32996
+global_step : 5
+loss : 9024847.0
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)2
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 274.43182
+global_step : 10
+loss : 5413003.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)2
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 393.1607
+global_step : 10
+loss : 5515389.5
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)3
+------------------------------------------------------------
+accuracy : 0.5184746
+average_loss : 103.69426
+global_step : 15
+loss : 2045307.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)3
+------------------------------------------------------------
+accuracy : 0.325698
+average_loss : 165.46556
+global_step : 15
+loss : 2321206.2
+===================Iteration ends =============== 
+=================Iteration starts =============== 
+Hidden Layer Structure : [50, 50, 50, 50, 50]
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 393.9925
+global_step : 5
+loss : 7771265.5
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 551.81433
+global_step : 5
+loss : 7741035.5
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)2
+------------------------------------------------------------
+accuracy : 0.51777494
+average_loss : 131.51129
+global_step : 10
+loss : 2593981.2
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)2
+------------------------------------------------------------
+accuracy : 0.3243436
+average_loss : 221.68654
+global_step : 10
+loss : 3109892.8
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)3
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 259.55402
+global_step : 15
+loss : 5119547.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)3
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 362.9008
+global_step : 15
+loss : 5090893.5
+===================Iteration ends =============== 
+=================Iteration starts =============== 
+Hidden Layer Structure : [50, 50, 50, 50]
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.51453024
+average_loss : 298.27243
+global_step : 5
+loss : 5883245.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.3238446
+average_loss : 514.64734
+global_step : 5
+loss : 7219644.0
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)2
+------------------------------------------------------------
+accuracy : 0.51662916
+average_loss : 151.56787
+global_step : 10
+loss : 2989585.5
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)2
+------------------------------------------------------------
+accuracy : 0.3256267
+average_loss : 219.1145
+global_step : 10
+loss : 3073811.2
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)3
+------------------------------------------------------------
+accuracy : 0.51502705
+average_loss : 81.80254
+global_step : 15
+loss : 1613506.1
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)3
+------------------------------------------------------------
+accuracy : 0.32522276
+average_loss : 133.2448
+global_step : 15
+loss : 1869202.5
+===================Iteration ends =============== 
+=================Iteration starts =============== 
+Hidden Layer Structure : [50, 50, 50, 50]
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 354.29214
+global_step : 5
+loss : 6988200.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 562.8694
+global_step : 5
+loss : 7896119.5
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)2
+------------------------------------------------------------
+accuracy : 0.27717954
+average_loss : 285.1526
+global_step : 10
+loss : 5624464.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)2
+------------------------------------------------------------
+accuracy : 0.27803254
+average_loss : 380.5003
+global_step : 10
+loss : 5337785.0
+****************************************************************************************************
+Evaluation on the training set for biasResults at epoch (Training data)3
+------------------------------------------------------------
+accuracy : 0.5179067
+average_loss : 284.83032
+global_step : 15
+loss : 5618107.0
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)3
+------------------------------------------------------------
+accuracy : 0.32424855
+average_loss : 417.83328
+global_step : 15
+loss : 5861504.5
+===================Iteration ends =============== 
+=================Iteration starts =============== 
+Hidden Layer Structure : [50, 50, 50, 50]
+****************************************************************************************************
+Evaluation on the training set for bias 
+Results at epoch (Training data)1
+------------------------------------------------------------
+accuracy : 0.51782566
+average_loss : 348.2177
+global_step : 5
+loss : 6868385.5
+****************************************************************************************************
+Evaluation on the test set for variance 
+Results at epoch (Test data)1
+------------------------------------------------------------
+accuracy : 0.3242723
+average_loss : 524.5638
+global_step : 5
+loss : 7358756.0
+===================Iteration ends =============== 
